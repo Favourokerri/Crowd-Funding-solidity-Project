@@ -13,8 +13,7 @@ contract CrowdFunding {
     struct Tier{
         string name;
         uint256 amount;
-        uint256 backers;
-        address funderAddress;
+        uint256 numberOfTimesUsed;
     }
 
     // store tier in an array
@@ -32,7 +31,7 @@ contract CrowdFunding {
 
     function addTier(string memory _name, uint256 _amount) public OnlyOwner{
         require(_amount > 0, "price must be greater than 0");
-        tiers.push(Tier(_name, _amount, 0, msg.sender));
+        tiers.push(Tier(_name, _amount, 0));
     }
 
     function removeTier(uint256 _index) public{
@@ -48,7 +47,7 @@ contract CrowdFunding {
         require(tiers.length > _tierIndex, "tier does not exist");
         require(msg.value == amountToFund, "please amount must be eqaul to tier selected");
 
-        tiers[_tierIndex].backers += 1;
+        tiers[_tierIndex].numberOfTimesUsed += 1;
     
     }
 

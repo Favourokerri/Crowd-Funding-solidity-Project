@@ -175,7 +175,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "backers",
+						"name": "numberOfTimesUsed",
 						"type": "uint256"
 					}
 				],
@@ -258,11 +258,11 @@
 			]
 		},
 		"contracts/CrowdFunding.sol": {
-			"keccak256": "0xdae14c2b51294f160df8df2a11d641c8055b545860c89c184679b969fe09f014",
+			"keccak256": "0x1b1ff2d136e24b388f51e1e5b9e0763eff90a5d4c500a6cf87b6327be36601a4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5c3b2e6020c061020ff45c8107c5987ee58a65710d05feea9eb45edb025e7a7d",
-				"dweb:/ipfs/QmTgNoMhxt7ijMJNUufidi9GhKnJaPg4TWGYsBtitX6b1D"
+				"bzz-raw://5a8c7a8f9eb96fd7e8f31d201683e11205f2e95e308b0aec90554be5e1dc8c25",
+				"dweb:/ipfs/QmVvK6ZcuCwh5Aun9gpuDbskNM9tgLcZWGX4bC5aqzB2Wx"
 			]
 		}
 	},
