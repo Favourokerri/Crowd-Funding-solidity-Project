@@ -32,6 +32,13 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [],
+				"name": "TogglePause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -47,6 +54,25 @@
 				"name": "addTier",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "backers",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "totalContribution",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -79,6 +105,19 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "_daysToAdd",
+						"type": "uint256"
+					}
+				],
+				"name": "extendDeadline",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "_tierIndex",
 						"type": "uint256"
 					}
@@ -86,6 +125,19 @@
 				"name": "fund",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCampaignState",
+				"outputs": [
+					{
+						"internalType": "enum CrowdFunding.CampaignState",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -103,12 +155,66 @@
 			},
 			{
 				"inputs": [],
+				"name": "getTiers",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "numberOfTimesUsed",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct CrowdFunding.Tier[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "goal",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_backer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tierIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "hasFundedTier",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -141,6 +247,26 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "paused",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "refund",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -151,6 +277,19 @@
 				"name": "removeTier",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "state",
+				"outputs": [
+					{
+						"internalType": "enum CrowdFunding.CampaignState",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -180,6 +319,13 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unPause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -258,11 +404,11 @@
 			]
 		},
 		"contracts/CrowdFunding.sol": {
-			"keccak256": "0x1b1ff2d136e24b388f51e1e5b9e0763eff90a5d4c500a6cf87b6327be36601a4",
+			"keccak256": "0xeae7b821be2c76237d315e44d7e7624f3ff77424aba28b6e08d7ec313450d9e2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5a8c7a8f9eb96fd7e8f31d201683e11205f2e95e308b0aec90554be5e1dc8c25",
-				"dweb:/ipfs/QmVvK6ZcuCwh5Aun9gpuDbskNM9tgLcZWGX4bC5aqzB2Wx"
+				"bzz-raw://d11aa3a85f21c7421d1b844781ff2ff2354b0e96959630a12c888feb6d33da83",
+				"dweb:/ipfs/QmW6EQCqRt6PSY1crmKtUCgH5fJM2i877nGwTcKRajqgs9"
 			]
 		}
 	},
